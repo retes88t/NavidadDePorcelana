@@ -1,0 +1,14 @@
+.practica__selector { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.practica__chip { border: 1px solid var(--color-borde); background: var(--color-superficie); color: var(--color-texto); padding: 0.45rem 0.9rem; border-radius: 999px; cursor: pointer; font-size: 0.95rem; }
+.practica__chip.activo { background: var(--color-primario); color: #fff; border-color: var(--color-primario); }
+.practica__progreso { color: var(--color-texto-suave); font-size: 0.9rem; }
+.practica__paso { background: var(--color-superficie); border: 1px solid var(--color-borde); border-radius: var(--radio); box-shadow: var(--sombra); padding: 1rem; }
+.practica__escena { margin: 0 0 0.75rem; font-weight: 600; color: var(--color-primario-oscuro); }
+.practica__contexto { max-height: 50vh; overflow-y: auto; }
+.practica__dialogo { margin: 0.4rem 0; }
+.practica__acotacion { margin: 0.4rem 0; font-style: italic; color: var(--color-texto-suave); }
+.practica__tuya { margin-top: 1rem; padding: 0.75rem; background: var(--color-porcelana); border-left: 4px solid var(--color-dorado); border-radius: 8px; }
+.practica__oculta { margin: 0 0 0.6rem; color: var(--color-texto-suave); }
+.practica__nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.practica__boton { border: 1px solid var(--color-primario); background: var(--color-primario); color: #fff; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
+.practica__boton:disabled { opacity: 0.45; cursor: not-allowed; }

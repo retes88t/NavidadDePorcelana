@@ -1,0 +1,315 @@
+import type { Escena, Linea } from '../types'
+
+// Transcripción fiel del Acto II del guion (inconsistencias del borrador conservadas).
+// `lugar` y `resumen` se completan en escenas-meta.ts y se combinan en src/data/index.ts.
+
+const d = (personaje: string, texto: string, acotacion?: string): Linea =>
+  acotacion === undefined
+    ? { tipo: 'dialogo', personaje, texto }
+    : { tipo: 'dialogo', personaje, texto, acotacion }
+
+const a = (texto: string): Linea => ({ tipo: 'acotacion', texto })
+
+export const acto2: Escena[] = [
+  {
+    numero: 5,
+    acto: 2,
+    titulo: 'La foto',
+    lugar: '',
+    resumen: '',
+    lineas: [
+      a(
+        'Todos se encuentran reunidos en el comedor. La mesa larga y central se encuentra decorada con candelabros, comida abundante, un camino de mesa, etc. El resto del salón se encuentra decorado con temática navideña. Todos están sentados en la mesa con su mejor ropa. Adriana, con un delantal, está en medio y es la única de pie. Luis se encuentra hasta la orilla y las dos parejas se sientan uno al lado del otro.',
+      ),
+      d(
+        'adriana',
+        'Quiero darles las gracias a todos por venir; yo sé que ya todos tienen sus vidas, pero para mí significa mucho que vengan a pasar este día tan importante en familia. Sé que ha sido un año difícil para nosotros, pero pase lo que pase, en esta familia siempre nos vamos a tener unos a otros. Y pues… ¡feliz Navidad y buen provecho!',
+      ),
+      d('luisfer', '¿Bueno, antes de comer deberíamos tomarnos una foto, no? Para no salir todos panzones'),
+      d('ana', 'Bueno, ¿qué tal frente al arbolito?'),
+      d('astrid', 'Pónganse; yo se las tomo; en mis tiempos libres hago fotografía.'),
+      a('Nora voltea los ojos.'),
+      d('nora', '¡Ay, los suéteres! Casi se me olvidan.'),
+      a('Nora les entrega los suéteres a cada uno. Todos se los ponen, cada uno pone un gesto diferente.'),
+      d('nora', 'Ay Astrid no sabía que ibas a venir, no tengo uno para ti…'),
+      d(
+        'astrid',
+        'No te preocupes, Nora, de hecho, vienen vestidos muy bien todos, ¿qué tal si para esta foto lucen sus atuendos de hoy?',
+      ),
+      d('luisfer', 'Si, sí, yo prefiero normal como dice Astrid.'),
+      a('Todos asienten y se quitan el suéter. Nora se disgusta.'),
+      d('astrid', 'Adriana, una de ti en medio con Chelo y Fer'),
+      a(
+        'Astrid agita su mano y todos se congelan. Mueve un poco a los posan para la foto para que salgan mejor. Astrid regresa a su lugar y toma la foto y reanuda la escena.',
+      ),
+      d('adriana', '¡Wow, Astrid, salimos muy bien!'),
+      d(
+        'astrid',
+        'Bueno, yo solo tomo la foto; la que se ve bien es usted. Ahora una Adriana con Nora y Fer',
+      ),
+      d('nora', 'LuisFer, se llama LuisFer.'),
+      a('Nora, Adriana y LuisFer posan para la foto'),
+      d('astrid', '¿Ana, una tu con tus sobrinos?'),
+      d('ana', 'Vengan mis muñecos'),
+      a('Ana, Marcelo y LuisFer posan de forma divertida para la foto'),
+      d('chelo', 'Mamá, una tú y yo, Astrid, Nora, ¿nos la tomas?'),
+      a('Nora toma la foto extremadamente rápido y no la mira. Astrid y Marcelo se miran extrañados.'),
+      d('nora', 'Ahora una todos.'),
+      a('Luis se emociona por ser incluido.'),
+      d('luis', '¿Dónde me pongo?'),
+      d('adriana', 'Tú… la tomas.'),
+      d('astrid', 'No, no se preocupen, yo la puedo tomar.'),
+      a('Adriana mira a Astrid con ojos de enojo.'),
+      d('nora', 'Sí, mejor que la tome Astrid.'),
+      d('chelo', 'Nombre Astrid, ¿cómo crees? Tenemos un tripié.'),
+      a(
+        'Marcelo saca un tripié de un cajón. Se acomodan con Astrid entre LuisFer y Marcelo y Luis y Ana en las orillas. Adriana y Ana están sentadas en el centro.',
+      ),
+      d('ana', 'Oigan, es un honor, pero ¿seguros de que yo en el centro? Mejor Luis y Adri'),
+      d('nora', 'Astrid yo creo que mejor deberías cambiarle al Sr. Luis'),
+      d('adriana', 'No, él está bien en la orilla.'),
+      d('astrid', 'Bueno, entonces ponte tú en la orilla tú también… por las alturas.'),
+      a('Ana interrumpe burlona con unas copas encima'),
+      d('ana', 'Si, las parejas en las orillas por si hay que cortarlas.'),
+      d('nora', 'Ana, a mí no me pongas en la misma categoría que esta arrimada,'),
+      d('chelo', 'Nora, no seas así; esta también es tu primera Navidad con nosotros.'),
+      d(
+        'luis',
+        'Bueno, Chelo, las queremos mucho a las dos, pero Norita ya lleva mucho tiempo en nuestras vidas; hay que darle prioridad.',
+      ),
+      d('chelo', 'Ah ya, o sea para salir en la foto Astrid también tiene que ganarse su lugar'),
+      d('luis', 'Ajá, algo así'),
+      d(
+        'chelo',
+        'Bueno Astrid, ya que pierdas tu dignidad por quedarte en la familia como Nora y mi mamá puedes salir en la foto, antes no.',
+      ),
+      a('Astrid agita su mano y todos se congelan. Astrid se dirige al público.'),
+      d('astrid', 'Marcelo, me van a odiar Es que creo que a tomó mucho vino'),
+      a(
+        'Astrid le quita la copa a chelo de la mano, le tira el vino, se la vuelve a poner en la mano, regresa a su lugar y reanuda la escena. Nora voltea a ver a LuisFer.',
+      ),
+      d('nora', '¿Y tú vas a dejar que me hablen así?'),
+      d('luis', 'Chicos, tranquilos, ¿por qué no nos sentamos a comer y ya?'),
+      d('luisfer', 'Nora y yo mejor nos vamos, tenemos otra cena en donde estar'),
+      d('luis', '¡Dije que nos vamos a sentar a comer!'),
+      d(
+        'chelo',
+        'Tú no tienes el derecho a decirle a nadie qué hacer… tú eres el que debería estar en la orilla de la foto…',
+      ),
+      a('Se siente mucha tensión en el comedor. Luis se levanta y habla con voz imponente.'),
+      d('luis', '¡Te recuerdo que esta es mi casa! ¡A mí nadie me va a hablar así en mi propia casa!'),
+      d('chelo', '¡Esta casa es de mi mamá!'),
+      d('luis', '¡Yo la estoy pagando!'),
+      d('chelo', '¡Pero a nombre de quién está!'),
+      d(
+        'adriana',
+        'No puedo creer que me andes reprochando por la casa cuando yo pasé toda la vida cuidando a tus hijos',
+      ),
+      d('luis', '¡Y mira cómo salieron!'),
+      d('adriana', 'A lo mejor salieron así porque nunca veían a su papá'),
+      d(
+        'luis',
+        'Pues a lo mejor nunca lo veían porque su papá estaba ocupado trabajando para pagarles la casa, los coches, los viajes,',
+      ),
+      d(
+        'ana',
+        'Ay por favor, si todo tu dinero te lo dejó mi papá, ¡hasta el mío! Lo que pasa es que te la vivías con tus amigos del Finlandés',
+      ),
+      d('chelo', 'Ajá, ¡tú no estuviste aquí porque no querías!'),
+      d('luis', '¡¿Tú crees que no quería?!'),
+      d('chelo', '¡No! Porque cuando sí estabas aquí lo único que hacías era esconderte y tomar'),
+      d(
+        'luis',
+        'Pues es que estaba cansado de trabajar, ustedes no saben lo que era trabajar con mi papá y aparte llegar a la casa a que también te estén fregando',
+      ),
+      d('chelo', '¡Sí sabemos por qué siempre nos lo decías!'),
+      d(
+        'luis',
+        'Ay sí sí sí yo yo tengo la culpa de todo pues yo soy el malo por darles todo lo que pedían, que tú querías una bolsa, te la compraba, que Luis quería estudiar en Londres pues ¡pum! se fue a Londres, ahí sí nadie se queja verdad',
+      ),
+      d(
+        'adriana',
+        '¡Sí, sí, me quejo! ¿Por qué te acuerdas de que me compraste la bolsa? Pues porque te caché ….',
+      ),
+      a('LuisFer interrumpe'),
+      d(
+        'luisfer',
+        '¡Bueno, ya estuvo bueno! ¡Es Navidad, por favor! Ya lo del pasado pasó y ya, yo creo que todos deberíamos agradecerle a mi papá…',
+      ),
+      d('chelo', 'Ya empezaste de lambiscón… como siempre, claro, cómo son igualitos…'),
+      d('luisfer', '¿Qué traes tu? Chango mantenido'),
+      a('Marcelo se dirige a Ana'),
+      d('chelo', '¿Sí o no?'),
+      d('ana', '¿Sí o no, ¿qué?'),
+      d('chelo', 'Que son igualitos'),
+      d('luisfer', '¿Yo y mi papá?'),
+      d('ana', 'Bueno, hasta se visten igual'),
+      a('Luis Fernando Jr. y Luis Fernando Sr. se ven uno al otro'),
+      d('luisfer', 'Y eso que'),
+      d('chelo', 'Pues que eres igual, también andas con una, pero le traes ganas a otras'),
+      a('Todos, en especial LuisFer, se quedan en shock.'),
+      d('chelo', '¿Crees que no se nota que se te cae la baba por Astrid? Das penita la verdad'),
+      d('luisfer', 'De qué hablas'),
+      d('chelo', 'Andas de encimoso con Astrid y ahí está la pobre de Nora dando lástima'),
+      a('Nora se avergüenza. LuisFer no sabe qué decir.'),
+      d('ana', 'Oigan ya estuvo bueno'),
+      d(
+        'nora',
+        '¡Además, tú no sabes nada de nuestra relación, Marcelo! Ya tenemos siete años de novios',
+      ),
+      d('chelo', 'Ay si están así a los cinco años, imagínate a los diez de casados, Norita, ¡piensa!'),
+      a('Astrid asiente en acuerdo con el comentario de Chelo'),
+      d('adriana', '¡Marcelo!'),
+      d('luisfer', '¡Tú así no le hablas a Nora!'),
+      d('chelo', 'Pero pues como tú le hablas peor, pensé que equis'),
+      a(
+        'Luis Fer entonces empuja a Marcelo y este, en consecuencia, tira el jarrón de David, que se rompe al caer al piso, Marcelo en respuesta empuja a LuisFer y este cae sobre el comedor y la comida. Ellos siguen peleando hasta que los detiene Adriana.',
+      ),
+      d(
+        'adriana',
+        '¡ALTO! Estuve más de 12 horas preparando todo, comprando los ingredientes, arreglando la casa, preparando la cena, para que todos llegaran y pudiéramos pasar, aunque sea una linda Navidad todos juntos, ¡y miren lo que pasó! ¡Como todo en esta familia, quedó arruinada!',
+      ),
+      a('Adriana se esconde en la cocina, Nora, la sigue, el resto se queda en la sala.'),
+      d('ana', '¿Están contentos? ¿Ven lo que hicieron?'),
+      d('luisfer', '¿Pues ahora qué, nos vamos?'),
+      d('ana', 'LuisFer, de verdad eres tu papá. Nos quedamos en lo que se recupera tu mamá.'),
+      d(
+        'luis',
+        'Es que son las hormonas, te lo juro que desde que le cayó la menopausia su mamá arma escándalo por todo',
+      ),
+    ],
+  },
+  {
+    numero: 6,
+    acto: 2,
+    titulo: 'Ciclos',
+    lugar: '',
+    resumen: '',
+    lineas: [
+      a(
+        'La cocina es el único “cuarto” encendido. El comedor se encuentra con luz tenue. Se ve a todos los personajes menos Nora y Adriana. En la cocina se encuentran Adriana y Nora.',
+      ),
+      a('Se encienden las luces en la cocina para revelar a Nora dándole un abrazo a Adriana.'),
+      d(
+        'nora',
+        'Suegra, lamento mucho lo que pasó allá, pero a veces así son las familias, en mi casa pasa todo el tiempo, de verdad. Ya todos son adultos, no debería dejar que sus discusiones le afecten tanto.',
+      ),
+      a('Con este comentario Adriana se molesta.'),
+      d(
+        'adriana',
+        'Sabes, Nora, tú me recuerdas mucho a mí cuando era joven; yo soñaba con el tipo de vida que podía darme Luis Fernando.',
+      ),
+      d('nora', 'y si formaron una bella familia Tía, solo que nada es perfecto'),
+      d(
+        'adriana',
+        'Yo, si volviera a tener tu edad, no me casaría con Luis Fernando. Yo era así como tú, tan joven, guapa, inocente y llena de esperanzas. Lo que quería era tener unos bebitos hermosos, y jugar tenis en el club con LuisFer.',
+      ),
+      d('nora', '¿y qué pasó?'),
+      d(
+        'adriana',
+        'Pues justo eso, tuve lo que tanto quería, y fueron los mejores años de mi vida, pero luego me di cuenta de que solo era yo con mis niños, y luego mis niños crecieron, y ahora solo soy yo….',
+      ),
+      d('nora', 'Bueno, pero es que el señor Luis también se pasa…'),
+      d(
+        'adriana',
+        'El señor Luis no hizo nada que no hubiera hecho en mis 30 años de casada. Yo, cuando me casé con él, yo sabía que tampoco fui su primera opción, pero me dijo que yo le daba paz, y a mí él me daba seguridad, pero con solo eso no es suficiente. Yo con los años dejé de ser la dulce niña que él quería tener en su casa y enseñarles a sus amigos. Pero es que, ¿cómo puede una competir con el tiempo… y la gravedad?',
+      ),
+      d('nora', 'Bueno, pero es que nunca hay que dejar de cuidarse'),
+      d('adriana', '¡Niña, ya quiero verte a ti con 50 años y en la mera menopausia!'),
+      d('nora', 'Bueno, yo mejor la dejo que descanse.'),
+    ],
+  },
+  {
+    numero: 7,
+    acto: 2,
+    titulo: 'Tropiezos',
+    lugar: '',
+    resumen: '',
+    lineas: [
+      a(
+        'Se ilumina el comedor y se apaga la cocina. El comedor listo con la comida fría. Todos en el comedor voltean a ver a Nora en cuanto entra al cuarto. El portal de la casa está apagado.',
+      ),
+      d('nora', '¿Y ahora qué hacemos?'),
+      d('luisfer', 'Mmm pues como que qué hacemos, ya vámonos cada uno a nuestras casas'),
+      d('ana', 'A ver, no. No se va a ir nadie,'),
+      d('astrid', 'Chelo no sé si sea lo mejor que me quede, creo que mejor me voy'),
+      d(
+        'chelo',
+        'No Astrid no te vayas por favor, qué pena contigo de verdad, es que siempre es así LuisFer siempre quiere arruinar todo lo bueno que me pasa',
+      ),
+      d('astrid', 'Bueno pero lo que tenemos no lo puede arruinar nadie'),
+      a(
+        'Astrid acaricia el rostro de Chelo, asegurándose de que LuisFer los esté viendo. Chelo sonríe mientras LuisFer los mira con envidia. Nora mira la escena. Se dirige a LuisFer.',
+      ),
+      d('nora', 'Luisfer, ¿podemos hablar afuera?'),
+      d('luisfer', '¿Qué quieres, Nora?'),
+      d('nora', 'Luis Fer, quiero terminar…'),
+      a('LuisFer dirige su atención hacia Nora con indignación. Los demás en la sala también voltean.'),
+      d('luisfer', '¿Qué? ¿Por lo que dijo Chelo? Nombre, no. Estás loca.'),
+      a(
+        'Salen LuisFer y Nora al portal de la casa. El resto de los personajes (excepto Adriana) se pegan a la puerta para escuchar.',
+      ),
+    ],
+  },
+  {
+    numero: 8,
+    acto: 2,
+    titulo: 'Otravez',
+    lugar: '',
+    resumen: '',
+    lineas: [
+      a(
+        'Se ilumina el portal. Los demás se mantienen en el comedor que sigue iluminado. En la puerta del lado del interior de la casa están Ana, Luis, Chelo y Astrid pegados a la puerta escuchando. Del lado del exterior. Se encuentran Nora y LuisFer. LuisFer tiene su abrigo, Nora lo olvidó adentro, se le ve con frío.',
+      ),
+      d(
+        'nora',
+        '¡No por lo que dijo Chelo, por cómo te estás portando tú! Es obvio que todavía te gusta Astrid-Estefi o lo que sea, o por lo menos te gusta más que yo.',
+      ),
+      d(
+        'luisfer',
+        'Nora no friegues, estás viendo todo lo que está pasando en mi familia y luego todavía tengo que lidiar con esto. Ya cálmate, neta, estás exagerando.',
+      ),
+      d(
+        'nora',
+        'LuisFer, es que, o sea, tenemos que hablar, quiero estar segura de que esta relación significa lo mismo para mí que para ti.',
+      ),
+      d(
+        'luisfer',
+        '¡Nora, ya estamos hablando! Te lo juro que solo me sacó de onda ver a Estefi. Nora, mira, de verdad, yo te amo, te amo muchísimo. ¡O sea, tú y yo nos vamos a casar! Qué más quieres',
+      ),
+      d('nora', 'Bueno…pues….'),
+      a('LuisFer interrumpe y toma las manos de Nora.'),
+      d(
+        'luisfer',
+        'Te lo prometo: eres la mujer de mi vida, Nora. Si quieres hablar, hablamos, pero otro día, ¿sí? Hoy es Navidad no hay que hacer un drama ¿okay linda?',
+      ),
+      d('nora', '¡Pero es que no es la primera vez que esto pasa! ¿Ya se te olvidó lo que pasó con Jenny?'),
+      a('Atrás de la puerta todos voltean a ver a Luis Sr.'),
+      d('luisfer', 'Amor, pero eso fue hace mil años y ya me habías perdonado'),
+      d('nora', 'Pero…'),
+      d('luisfer', 'No se vale traer cosas del pasado, amor. Ya te di el anillo, ¿sí? Tranquila, linda.'),
+      d('luis', 'Oigan, ya. Ya basta, no deberíamos estar escuchando.'),
+      a('Luis abre la puerta e interrumpe a Nora y LuisFer'),
+      d('luis', 'Hijo, ya entren por favor, hace mucho frío. Ya no hagan drama. Por favor.'),
+      d('luisfer', 'Sí ya vamos,'),
+      d('nora', 'Sí yo voy, pero por mis cosas, toma tu anillo.'),
+      a(
+        'Nora arroja el anillo a la dirección de LuisFer, luego entra a la casa, recoge sus cosas y se va. Astrid festeja silenciosamente. LuisFer se queda congelado. Todos los demás se quedan en shock.',
+      ),
+      d('ana', '¿Qué pasó?'),
+      d('luisfer', 'Nora me cortó… acaba de devolverme el anillo'),
+      d('luis', 'No, aquí nadie deja a nadie. Voy a hablar con ella.'),
+      a('Luis sale detrás de Nora'),
+      d('luisfer', 'No sé, de repente se puso como loca….'),
+      d(
+        'ana',
+        'Ven, Junior, siéntate, todavía tenemos que abrir los regalos. ¿No jalas, LuisFer? ¿A abrir regalos?',
+      ),
+      d('luisfer', 'Yo quisiera morirme mejor.'),
+      d('ana', 'Bueno, entonces déjame ir por tu mamá.'),
+      a(
+        'Marcelo y Astrid se quedan consolando a LuisFer. El comedor se apaga. Ana entra a la cocina y la cocina se enciende.',
+      ),
+    ],
+  },
+]

@@ -1,0 +1,17 @@
+:root {
+  --color-fondo: #faf5ee;
+  --color-superficie: #ffffff;
+  --color-porcelana: #f1e9de;
+  --color-texto: #2b2220;
+  --color-texto-suave: #6b5d57;
+  --color-primario: #9b1c2e;
+  --color-primario-oscuro: #6f1220;
+  --color-acento: #2f6b4f;
+  --color-dorado: #c19a4b;
+  --color-borde: #e3d6c6;
+  --radio: 12px;
+  --sombra: 0 2px 10px rgba(80, 40, 30, 0.1);
+  --fuente-titulo: Georgia, 'Palatino Linotype', 'Book Antiqua', serif;
+  --fuente-cuerpo: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  --ancho-max: 1100px;
+}
