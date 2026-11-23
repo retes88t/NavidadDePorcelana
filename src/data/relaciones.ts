@@ -26,7 +26,7 @@ export const relaciones: Relacion[] = [
   { origen: 'ana', destino: 'chelo', tipo: 'parentesco', descripcion: 'Tía y sobrino' },
   { origen: 'ana', destino: 'adriana', tipo: 'amistad', descripcion: 'Mejores amigas desde la primaria' },
   { origen: 'luisfer', destino: 'chelo', tipo: 'hermanos', descripcion: 'Hermanos' },
-  { origen: 'luisfer', destino: 'nora', tipo: 'pareja', descripcion: 'Prometidos tras 7 años de novios; Nora termina con él en la Escena 8' },
+  { origen: 'luisfer', destino: 'nora', tipo: 'pareja', descripcion: 'Prometidos tras 7 años de novios; Nora plantea terminar en la Escena 7 y en la Escena 11 dice que necesita pensar' },
   { origen: 'chelo', destino: 'astrid', tipo: 'pareja', descripcion: 'Salen desde hace aproximadamente un mes' },
   { origen: 'luisfer', destino: 'astrid', tipo: 'ex-pareja', descripcion: 'Fueron novios en la universidad' },
   { origen: 'luisfer', destino: 'jenny', tipo: 'conflicto', descripcion: 'Antiguo episodio de infidelidad que Nora le reclama' },

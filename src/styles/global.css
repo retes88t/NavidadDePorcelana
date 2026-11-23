@@ -31,12 +31,15 @@ img, svg { max-width: 100%; }
 }
 
 /* Navbar */
-.navbar { background: var(--color-primario); color: #fff; position: sticky; top: 0; z-index: 10; box-shadow: var(--sombra); }
+.navbar { background: var(--color-navbar); color: var(--color-sobre-primario); position: sticky; top: 0; z-index: 10; box-shadow: var(--sombra); }
 .navbar__interior { max-width: var(--ancho-max); margin: 0 auto; padding: 0.5rem 1rem; }
-.navbar__marca { color: #fff; text-decoration: none; font-family: var(--fuente-titulo); font-size: 1.2rem; font-weight: bold; display: inline-block; padding: 0.25rem 0; }
+.navbar__marca { color: var(--color-sobre-primario); text-decoration: none; font-family: var(--fuente-titulo); font-size: 1.2rem; font-weight: bold; display: inline-block; padding: 0.25rem 0; }
 .navbar__lista { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.25rem; overflow-x: auto; }
-.navbar__link { display: block; white-space: nowrap; padding: 0.45rem 0.8rem; color: #fff; text-decoration: none; border-radius: 999px; font-size: 0.95rem; }
-.navbar__link:hover { background: rgba(255, 255, 255, 0.18); }
+.navbar__link { display: block; white-space: nowrap; padding: 0.45rem 0.8rem; color: var(--color-sobre-primario); text-decoration: none; border-radius: 999px; font-size: 0.95rem; }
+.navbar__link:hover { background: var(--color-hover-claro); }
+.navbar__tema { display: block; white-space: nowrap; padding: 0.4rem 0.8rem; border: 1px solid var(--color-hover-claro); border-radius: 999px; background: transparent; color: var(--color-sobre-primario); font: inherit; font-size: 0.95rem; cursor: pointer; }
+.navbar__tema:hover { background: var(--color-hover-claro); }
+.navbar__tema:focus-visible { outline: 2px solid var(--color-sobre-primario); outline-offset: 2px; }
 .navbar__link.activo { background: var(--color-porcelana); color: var(--color-primario-oscuro); font-weight: 600; }
 
 @media (min-width: 800px) {

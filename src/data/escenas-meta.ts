@@ -55,9 +55,9 @@ export const escenasMeta: EscenaMeta[] = [
   {
     numero: 8,
     acto: 2,
-    titulo: 'Otravez',
+    titulo: 'Otra Vez',
     lugar: 'Portal de la casa, con el comedor iluminado al fondo',
-    resumen: 'Nora y LuisFer cortan.',
+    resumen: 'Nora y LuisFer cortan. Al final, Nora y Astrid hablan aparte (el borrador rotula este bloque como «ESCENA 9.»).',
   },
   {
     numero: 9,
@@ -83,7 +83,7 @@ export const escenasMeta: EscenaMeta[] = [
   {
     numero: 12,
     acto: 3,
-    titulo: 'Navidad',
+    titulo: 'Navidad.',
     lugar: 'Comedor',
     resumen: 'Limpian la casa. Todos se van a dormir.',
   },

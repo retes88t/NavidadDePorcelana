@@ -127,7 +127,7 @@ export const acto3: Escena[] = [
   {
     numero: 12,
     acto: 3,
-    titulo: "Navidad",
+    titulo: "Navidad.",
     lugar: '',
     resumen: '',
     lineas: [

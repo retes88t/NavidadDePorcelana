@@ -3,6 +3,12 @@ import { escenas, personajes } from '../data'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import SelectorPersonaje from '../components/practica/SelectorPersonaje'
 import EnsayoPaso from '../components/practica/EnsayoPaso'
+import SelectorModo, { type ModoPractica } from '../components/practica/SelectorModo'
+import OpcionMultiple from '../components/practica/OpcionMultiple'
+import Examen from '../components/practica/Examen'
+import BorradorProgresivo from '../components/practica/BorradorProgresivo'
+import PanelProgreso from '../components/practica/PanelProgreso'
+import { useProgresoPractica } from '../hooks/useProgresoPractica'
 import { construirPasos } from '../components/practica/pasos'
 import '../styles/practica.css'
 
@@ -13,11 +19,23 @@ export default function Practica() {
     personaje: personajes[0].id,
     posiciones: {},
   })
+  const progresoPractica = useProgresoPractica()
+  const [modo, setModo] = useState<ModoPractica>('ensayo')
   const [revelada, setRevelada] = useState(false)
 
   const personaje = personajes.find((p) => p.id === progreso.personaje) ?? personajes[0]
   const pasos = useMemo(() => construirPasos(escenas, personaje.id), [personaje.id])
   const posicion = Math.min(Math.max(progreso.posiciones[personaje.id] ?? 0, 0), Math.max(pasos.length - 1, 0))
+
+  const idsLineas = useMemo(() => pasos.map((p) => p.id), [pasos])
+  const porcentajesTotales = useMemo(() => {
+    const mapa: Record<string, number> = {}
+    for (const p of personajes) {
+      const ids = construirPasos(escenas, p.id).map((x) => x.id)
+      mapa[p.id] = progresoPractica.porcentajes(p.id, ids).total
+    }
+    return mapa
+  }, [progresoPractica.porcentajes])
 
   useEffect(() => setRevelada(false), [personaje.id, posicion])
 
@@ -37,8 +55,20 @@ export default function Practica() {
         personajes={personajes}
         seleccionado={personaje.id}
         onCambiar={(id) => setProgreso((p) => ({ ...p, personaje: id }))}
+        porcentajes={porcentajesTotales}
       />
-      {paso ? (
+      <SelectorModo modo={modo} onCambiar={setModo} />
+      <PanelProgreso progreso={progresoPractica} personaje={personaje.id} idsLineas={idsLineas} />
+      {modo === 'opcion-multiple' && (
+        <OpcionMultiple key={personaje.id} progreso={progresoPractica} personaje={personaje.id} pasos={pasos} escenas={escenas} />
+      )}
+      {modo === 'examen' && (
+        <Examen key={personaje.id} progreso={progresoPractica} personaje={personaje.id} pasos={pasos} escenas={escenas} />
+      )}
+      {modo === 'borrador' && (
+        <BorradorProgresivo key={personaje.id} progreso={progresoPractica} personaje={personaje.id} pasos={pasos} />
+      )}
+      {modo !== 'ensayo' ? null : paso ? (
         <>
           <p className="practica__progreso">
             Ensayando a {personaje.nombreCorto} · línea {posicion + 1} de {pasos.length}
