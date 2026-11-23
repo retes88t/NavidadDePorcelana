@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --color-fondo: #faf5ee;
   --color-superficie: #ffffff;
   --color-porcelana: #f1e9de;
@@ -9,9 +10,51 @@
   --color-acento: #2f6b4f;
   --color-dorado: #c19a4b;
   --color-borde: #e3d6c6;
+  --color-sobre-primario: #ffffff;
+  --color-navbar: var(--color-primario);
+  --color-hover-claro: rgba(255, 255, 255, 0.18);
+  --color-pista: rgba(0, 0, 0, 0.12);
+  --color-ok-fondo: #e6f2ec;
+  --color-ok-texto: #1d4a35;
+  --color-error-fondo: #fbe9ec;
+  --color-error-texto: var(--color-primario-oscuro);
+  --rel-pareja: #9b1c2e;
+  --rel-hermanos: #2f6b4f;
+  --rel-amistad: #c19a4b;
+  --rel-conflicto: #e07a1f;
+  --rel-parentesco: #8a7b74;
   --radio: 12px;
   --sombra: 0 2px 10px rgba(80, 40, 30, 0.1);
   --fuente-titulo: Georgia, 'Palatino Linotype', 'Book Antiqua', serif;
   --fuente-cuerpo: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
   --ancho-max: 1100px;
+}
+
+/* Modo oscuro: lo activa el atributo data-tema="oscuro" en <html> (ver index.html y useTema). */
+:root[data-tema='oscuro'] {
+  color-scheme: dark;
+  --color-fondo: #17120f;
+  --color-superficie: #221b17;
+  --color-porcelana: #2d2420;
+  --color-texto: #efe6dc;
+  --color-texto-suave: #b5a69c;
+  --color-primario: #c8414f;
+  --color-primario-oscuro: #f0a9b2;
+  --color-acento: #5fae86;
+  --color-dorado: #d9b468;
+  --color-borde: #3d322c;
+  --color-sobre-primario: #ffffff;
+  --color-navbar: #4a1620;
+  --color-hover-claro: rgba(255, 255, 255, 0.12);
+  --color-pista: rgba(255, 255, 255, 0.16);
+  --color-ok-fondo: #1d3529;
+  --color-ok-texto: #a8dcc0;
+  --color-error-fondo: #3a1d22;
+  --color-error-texto: #f0a9b2;
+  --rel-pareja: #e0566a;
+  --rel-hermanos: #5fae86;
+  --rel-amistad: #d9b468;
+  --rel-conflicto: #f0934a;
+  --rel-parentesco: #a8988f;
+  --sombra: 0 2px 10px rgba(0, 0, 0, 0.45);
 }

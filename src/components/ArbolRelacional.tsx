@@ -23,12 +23,12 @@ const estilos: Record<
   TipoRelacion,
   { nombre: string; color: string; dash?: string; ancho: number }
 > = {
-  pareja: { nombre: 'Pareja', color: '#9b1c2e', ancho: 4 },
-  'ex-pareja': { nombre: 'Ex pareja', color: '#9b1c2e', dash: '10 6', ancho: 3 },
-  hermanos: { nombre: 'Hermanos', color: '#2f6b4f', ancho: 3 },
-  amistad: { nombre: 'Amistad', color: '#c19a4b', dash: '2 6', ancho: 4 },
-  conflicto: { nombre: 'Conflicto', color: '#e07a1f', dash: '3 3', ancho: 3 },
-  parentesco: { nombre: 'Parentesco', color: '#8a7b74', ancho: 2 },
+  pareja: { nombre: 'Pareja', color: 'var(--rel-pareja)', ancho: 4 },
+  'ex-pareja': { nombre: 'Ex pareja', color: 'var(--rel-pareja)', dash: '10 6', ancho: 3 },
+  hermanos: { nombre: 'Hermanos', color: 'var(--rel-hermanos)', ancho: 3 },
+  amistad: { nombre: 'Amistad', color: 'var(--rel-amistad)', dash: '2 6', ancho: 4 },
+  conflicto: { nombre: 'Conflicto', color: 'var(--rel-conflicto)', dash: '3 3', ancho: 3 },
+  parentesco: { nombre: 'Parentesco', color: 'var(--rel-parentesco)', ancho: 2 },
 }
 
 // Curvatura extra para evitar que una arista atraviese otro nodo.
@@ -95,7 +95,7 @@ export default function ArbolRelacional() {
                   y1="6"
                   x2="40"
                   y2="6"
-                  stroke={e.color}
+                  style={{ stroke: e.color }}
                   strokeWidth={e.ancho}
                   strokeDasharray={e.dash}
                   strokeLinecap="round"
@@ -140,7 +140,7 @@ export default function ArbolRelacional() {
                   key={i}
                   d={d}
                   fill="none"
-                  stroke={e.color}
+                  style={{ stroke: e.color }}
                   strokeWidth={e.ancho}
                   strokeDasharray={e.dash}
                   strokeLinecap="round"
@@ -174,7 +174,7 @@ export default function ArbolRelacional() {
                     }
                   }}
                 >
-                  <circle cx={x} cy={y} r={RADIO + 4} fill="#fff" />
+                  <circle cx={x} cy={y} r={RADIO + 4} style={{ fill: 'var(--color-superficie)' }} />
                   <image
                     href={`${base}avatares/${n.id}.svg`}
                     x={x - RADIO}

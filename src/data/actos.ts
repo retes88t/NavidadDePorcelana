@@ -11,7 +11,7 @@ export const actos: Acto[] = [
     numero: 2,
     titulo: 'Acto II',
     resumen:
-      'La sesión de fotos antes de la cena desata la pelea principal: reproches sobre la casa, el dinero y la ausencia de Luis, y la acusación de Chelo sobre la atracción de LuisFer por Astrid. Un jarrón se rompe y la cena queda arruinada. Nora conversa con Adriana, le pide hablar a LuisFer y termina el compromiso devolviéndole el anillo.',
+      'La sesión de fotos antes de la cena desata la pelea principal: reproches sobre la casa, el dinero y la ausencia de Luis, y la acusación de Chelo sobre la atracción de LuisFer por Astrid. Un jarrón se rompe y la cena queda arruinada. Nora conversa con Adriana, le pide hablar a LuisFer y le dice que quiere terminar. Astrid la alcanza y conversan, y Nora queda sin saber qué hacer.',
   },
   {
     numero: 3,

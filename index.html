@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navidad de Porcelana</title>
+    <script>
+      // Aplica el tema antes de pintar para evitar parpadeo (ver src/hooks/useTema.ts).
+      try {
+        var t = localStorage.getItem('navidad-tema')
+        if (t !== 'claro' && t !== 'oscuro') {
+          t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'
+        }
+        document.documentElement.dataset.tema = t
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

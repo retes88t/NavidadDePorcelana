@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import { rutas } from './rutas'
+import { useTema } from '../hooks/useTema'
 
 export default function Navbar() {
+  const { tema, alternar } = useTema()
+  const oscuro = tema === 'oscuro'
   return (
     <header className="navbar">
       <nav className="navbar__interior" aria-label="Navegación principal">
@@ -19,6 +22,17 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <button
+              type="button"
+              className="navbar__tema"
+              onClick={alternar}
+              aria-pressed={oscuro}
+              title={oscuro ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+            >
+              <span aria-hidden="true">{oscuro ? '☀' : '☾'}</span> {oscuro ? 'Claro' : 'Oscuro'}
+            </button>
+          </li>
         </ul>
       </nav>
     </header>

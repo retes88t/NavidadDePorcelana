@@ -97,7 +97,7 @@
 
 .arbol-chip {
   display: inline-block;
-  color: #fff;
+  color: var(--color-sobre-primario);
   font-size: 0.75rem;
   padding: 0.1rem 0.5rem;
   border-radius: 999px;

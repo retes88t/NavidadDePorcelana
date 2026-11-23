@@ -3,8 +3,8 @@ export const sinopsisGuion =
 
 export const resumenPropio: string[] = [
   'Es la noche del 24 de diciembre en una casa de San Pedro, Nuevo León. Adriana quiere una Navidad perfecta, pero sus hijos han invitado a Luis, su ex esposo, para que no pase la fecha solo. A la mesa se suman Ana, hermana de Luis y mejor amiga de Adriana, y Nora, la prometida de LuisFer.',
-  'La llegada de Astrid, la nueva novia de Chelo y ex novia de LuisFer, que además puede congelar el tiempo y hablarle al público, rompe el equilibrio. Una sesión de fotos se convierte en una pelea en la que salen a la luz viejos reproches, el jarrón heredado se rompe y la cena queda arruinada.',
-  'Nora termina con LuisFer al ver que su atención sigue puesta en Astrid. Más tarde regresa, la familia cena en silencio y Luis intenta recuperar a Adriana, aunque ella ya empezó una vida propia. Al final la casa se limpia y Adriana guarda un pedazo del jarrón: las cosas cambian, pero siguen siendo parte de su historia.',
+  'La llegada de Astrid, la nueva novia de Chelo y ex novia de LuisFer, rompe el equilibrio. Una sesión de fotos se convierte en una pelea en la que salen a la luz viejos reproches, el jarrón heredado se rompe y la cena queda arruinada.',
+  'Nora le dice a LuisFer que quiere terminar al ver que su atención sigue puesta en Astrid. Más tarde regresa y la familia cena en silencio y Luis intenta recuperar a Adriana, aunque ella ya empezó una vida propia. Al final la casa se limpia y Adriana guarda un pedazo del jarrón: las cosas cambian, pero siguen siendo parte de su historia.',
 ]
 
 export const conclusiones: string[] = [
